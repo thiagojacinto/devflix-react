@@ -1,0 +1,30 @@
+:root {
+  --MEDIA_MAX_WIDTH: 640px;
+  --MEDIA_MAX_HEIGHT: 768px;
+
+  --SMALL_FONT: 1em;
+  --NORMAL_FONT: 1.15em;
+  --LARGE_FONT: 1.3em;
+
+  --LOGO_HEIGHT: 3em;
+
+  --dark: rgb(46, 34, 80);
+  --primary_color: #c0b9dd;
+  --primary_bg: #ded9e2;
+
+  --secondary_color: #75c9c8;
+  --secondary_bg: #f7f4ea;
+}
+
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--secondary_bg);
+  text-decoration: none;
+  cursor: pointer;
+}
