@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import "../../styles/onHoverEffect.css";
+
 const BaseFooter = styled.footer`
   background-color: var(--dark);
   color: var(--secondary_color);
@@ -18,16 +20,27 @@ const BaseFooter = styled.footer`
   }
 `;
 
-function Footer() {
+export function Footer({ animation = true }) {
   return (
     <BaseFooter>
       <strong>
-        Created by <a href="https://github.com/thiagojacinto">Thiago Jacinto</a>{" "}
+        Created by{" "}
+        <a
+          className={animation ? "hover__animation" : ""}
+          href="https://github.com/thiagojacinto"
+        >
+          Thiago Jacinto
+        </a>{" "}
         @ 2020
       </strong>
       <p>
         Inspired by{" "}
-        <a href="https://github.com/imersao-alura/aluraflix">Imersão React</a>{" "}
+        <a
+          className={animation ? "hover__animation" : ""}
+          href="https://github.com/imersao-alura/aluraflix"
+        >
+          Imersão React
+        </a>{" "}
         da Alura.
       </p>
     </BaseFooter>

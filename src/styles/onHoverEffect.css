@@ -1,9 +1,12 @@
-a {
+/* SOURCE: https://css-tricks.com/having-fun-with-link-hover-effects/ */
+
+a.hover__animation {
   background: linear-gradient(
     to bottom,
     var(--secondary_color) 0%,
-    var(--secondary_color) 100%
+    var(--primary_bg) 100%
   );
+  border-radius: 2px;
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 4px 4px;
@@ -12,7 +15,7 @@ a {
   transition: background-size 0.2s, color 0.3s;
 }
 
-a:hover {
+a.hover__animation:hover {
   background-size: 4px 50px;
   color: var(--dark);
 }
