@@ -1,16 +1,17 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
+import { Link } from "react-router-dom";
 
 import LogoImage from "../../assets/Logo.png";
 import Button from "../Button";
 
 export const Bar = styled.header`
   width: 100vw;
-  height: 20%;
+  height: 10%;
   padding: 1em 0;
 
   display: flex;
-  align-content: space-between;
+  align-items: center;
   justify-content: space-around;
 
   transition: 0.3s;
@@ -28,20 +29,28 @@ export const Bar = styled.header`
 
   @media screen and (max-height: 768px) {
     height: var(--LOGO_HEIGHT);
+    & .logo {
+      height: var(--LOGO_HEIGHT);
+    }
   }
 `;
 
-const theme = {
+const defaultTheme = {
   color: "var(--primary_color)",
+  bg: "var(--primary_bg)",
 };
 
-export const Topbar = () => {
+export const Topbar = ({ theme }) => {
   return (
     <Bar className="container">
-      <img className="logo" src={LogoImage} alt="Devflix Logo" />
+      <Link to="/">
+        <img className="logo" src={LogoImage} alt="Devflix Logo" />
+      </Link>
 
-      <ThemeProvider theme={theme}>
-        <Button>Add movie</Button>
+      <ThemeProvider theme={theme ? theme : defaultTheme}>
+        <Link to="/addmovie">
+          <Button>Add movie</Button>
+        </Link>
       </ThemeProvider>
     </Bar>
   );
