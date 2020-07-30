@@ -1,14 +1,29 @@
 import React from "react";
-import Topbar from "./components/Topbar";
-import Footer from "./components/Footer";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import PageNotFound from "./pages/PageNotFound";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <>
-      <Topbar />
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
 
-      <Footer />
-    </>
+        {/* <Route path="/addmovie">
+          <AddMovieForm />
+        </Route> */}
+
+        {/* <Route path="/video">
+          <VideoPlayer />
+        </Route> */}
+
+        <Route path="*">
+          <PageNotFound />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
