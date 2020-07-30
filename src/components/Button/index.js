@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import "../../styles/onHoverEffect.css";
 
 export const Button = styled.button`
   font-size: 1em;
-  padding: 0.25em 1em;
+  padding: 1em;
   border-radius: 5px;
 
   cursor: pointer;
