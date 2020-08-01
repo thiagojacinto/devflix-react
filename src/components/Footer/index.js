@@ -4,19 +4,21 @@ import styled from "styled-components";
 import "../../styles/onHoverEffect.css";
 
 const BaseFooter = styled.footer`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
   background-color: var(--dark);
   color: var(--secondary_color);
 
-  padding: 1em 1.2em;
-
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   strong {
-    font-size: 1.2em;
-    margin-bottom: 5%;
+    font-size: var(--LARGE_FONT);
+    padding: 1.3em 0;
   }
 `;
 
@@ -28,6 +30,8 @@ export function Footer({ animation = true }) {
         <a
           className={animation ? "hover__animation" : ""}
           href="https://github.com/thiagojacinto"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Thiago Jacinto
         </a>{" "}
@@ -38,6 +42,8 @@ export function Footer({ animation = true }) {
         <a
           className={animation ? "hover__animation" : ""}
           href="https://github.com/imersao-alura/aluraflix"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Imersão React
         </a>{" "}
