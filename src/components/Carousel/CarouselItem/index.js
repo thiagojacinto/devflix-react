@@ -15,6 +15,7 @@ export const CarouselItem = styled.li`
   & a {
     flex: none;
     object-fit: cover;
+    box-shadow: 0px 0px 40px -10px rgba(40, 4, 69, 0.9);
   }
 `;
 

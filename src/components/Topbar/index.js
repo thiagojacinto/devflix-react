@@ -13,12 +13,18 @@ export const Bar = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  box-shadow: inset -1em -2.5em 3em -3em ${({ theme }) => theme.dark};
 
   transition: 0.3s;
 
   .logo {
     height: 100%;
     width: auto;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .logo:hover {
+    opacity: 0.7;
   }
 
   @media screen and (max-width: 600px) {
@@ -38,16 +44,17 @@ export const Bar = styled.header`
 const defaultTheme = {
   color: "var(--primary_color)",
   bg: "var(--primary_bg)",
+  dark: "var(--dark)",
 };
 
 export const Topbar = ({ theme }) => {
   return (
     <Bar className="container">
-      <Link to="/">
-        <img className="logo" src={LogoImage} alt="Devflix Logo" />
-      </Link>
-
       <ThemeProvider theme={theme ? theme : defaultTheme}>
+        <Link to="/">
+          <img className="logo" src={LogoImage} alt="Devflix Logo" />
+        </Link>
+
         <Link to="/addmovie">
           <Button>Add movie</Button>
         </Link>
