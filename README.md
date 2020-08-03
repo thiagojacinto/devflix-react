@@ -3,6 +3,40 @@ Project from Alura's #ImersãoReact.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Structure
+
+* src
+
+* [__test__/](./src/__test__)
+  * [mock-data/](./src/__test__/mock-data)
+  * [Topbar.test.js](./src/__test__/Topbar.test.js)
+  * [setupTests.js](./src/__test__/setupTests.js)
+  * [utils.getDataFromYoutubeLink.test.js](./src/__test__/utils.getDataFromYoutubeLink.test.js)
+* [assets/](./src/assets)
+  * [Logo.png](./src/assets/Logo.png)
+* [components/](./src/components)
+  * [AddMovieForm/](./src/components/AddMovieForm)
+  * [Button/](./src/components/Button)
+  * [Carousel/](./src/components/Carousel)
+  * [Footer/](./src/components/Footer)
+  * [Topbar/](./src/components/Topbar)
+* [pages/](./src/pages)
+  * [AddMovie/](./src/pages/AddMovie)
+  * [Categories/](./src/pages/Categories)
+  * [Home/](./src/pages/Home)
+  * [PageContentWrapper/](./src/pages/PageContentWrapper)
+  * [PageDefault/](./src/pages/PageDefault)
+  * [PageNotFound/](./src/pages/PageNotFound)
+* [styles/](./src/styles)
+  * [index.css](./src/styles/index.css)
+  * [onHoverEffect.css](./src/styles/onHoverEffect.css)
+* [utils/](./src/utils)
+  * [getDataFromYoutubeLink.js](./src/utils/getDataFromYoutubeLink.js)
+* [App.js](./src/App.js)
+* [index.js](./src/index.js)
+
+<h1>Create React App Instructions<h1>
+
 ## Available Scripts
 
 In the project directory, you can run:
