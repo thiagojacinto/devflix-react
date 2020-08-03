@@ -3,7 +3,7 @@ import PageDefault from "../PageDefault";
 import Categories from "../Categories";
 import mockData from "../../__test__/mock-data/data.json";
 
-export function Home() {
+export function Home({ theme }) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
